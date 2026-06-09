@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🇲🇾 マレーシアツアー 第5回 旅のしおり</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:       #E8650A;
+      --navy-mid:   #d05a08;
+      --navy-light: #b84d06;
+      --gold:       #F4A124;
+      --gold-light: #f7c06a;
+      --gold-pale:  #FFF8F0;
+      --white:      #ffffff;
+      --emerald:    #00a86b;
+      --emerald-light: #d0f5e8;
+      --red:        #C0392B;
+      --red-light:  #ffe5e5;
+      --day1:       #1a3a5c;
+      --day1-bg:    #e8f0f8;
+      --day2:       #5c1a3a;
+      --day2-bg:    #f8e8f0;
+      --day3:       #1a5c3a;
+      --day3-bg:    #e8f8ee;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: #FFF8F0;
+      color: #1a1a2e;
+      line-height: 1.75;
+    }
+
+    /* ===== HEADER ===== */
+    .site-header {
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(180,80,0,0.6)), url('https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      padding: 60px 24px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: none;
+    }
+    .header-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .header-flag-bar {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+    .flag-stripe {
+      height: 6px;
+      border-radius: 3px;
+    }
+    .fs-navy  { width: 80px; background: var(--navy); }
+    .fs-red   { width: 80px; background: var(--red); }
+    .fs-white { width: 40px; background: var(--white); }
+    .fs-gold  { width: 40px; background: var(--gold); }
+
+    .header-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      padding: 4px 16px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+    .site-header h1 {
+      color: var(--white);
+      font-size: clamp(22px, 5vw, 40px);
+      font-weight: 900;
+      letter-spacing: 1px;
+      line-height: 1.3;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .site-header .subtitle {
+      color: #ffd580;
+      font-size: clamp(13px, 2.5vw, 17px);
+      font-weight: 500;
+      margin-top: 12px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    }
+    .site-header .tagline {
+      color: var(--white);
+      font-size: clamp(11px, 2vw, 14px);
+      margin-top: 8px;
+      opacity: 0.9;
+    }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 64px;
+    }
+
+    /* ===== SECTION CARDS ===== */
+    .card {
+      background: var(--white);
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(13,27,62,0.10);
+      padding: 32px 28px;
+      margin-bottom: 32px;
+      border-top: 4px solid var(--gold);
+    }
+    .card-navy  { border-top-color: var(--navy); }
+    .card-emerald { border-top-color: var(--emerald); }
+    .card-red   { border-top-color: var(--red); }
+    .card-gold  { border-top-color: var(--gold); }
+
+    /* ===== SECTION HEADINGS ===== */
+    .section-title {
+      font-size: clamp(18px, 4vw, 24px);
+      font-weight: 900;
+      color: var(--navy);
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--gold-light);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    h3 {
+      font-size: clamp(15px, 3vw, 18px);
+      font-weight: 700;
+      color: var(--navy-mid);
+      margin: 24px 0 12px;
+    }
+    h4 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 20px 0 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    /* ===== BLOCKQUOTE / CALLOUT ===== */
+    blockquote {
+      background: var(--gold-pale);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+      color: #4a3a00;
+    }
+    blockquote strong { color: var(--navy); }
+    .callout-tip {
+      background: var(--emerald-light);
+      border-left: 4px solid var(--emerald);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: #0a3d25;
+    }
+    .callout-warning {
+      background: #fff4e0;
+      border-left: 4px solid #e08000;
+      border-radius: 0 10px 10px 0;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 13.5px;
+      color: #5a3000;
+    }
+
+    /* ===== TABLES ===== */
+    .table-wrap { overflow-x: auto; margin: 16px 0; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    thead tr { background: var(--navy); color: var(--white); }
+    thead th { padding: 12px 14px; font-weight: 700; text-align: left; white-space: nowrap; }
+    tbody tr:nth-child(even) { background: #f5f7fc; }
+    tbody tr:hover { background: #eaf0fc; }
+    tbody td { padding: 11px 14px; border-bottom: 1px solid #e8eaf0; vertical-align: top; }
+    tbody td:first-child { white-space: nowrap; }
+    .table-gold thead tr { background: var(--gold); color: var(--navy); }
+    .table-emerald thead tr { background: var(--emerald); color: var(--white); }
+
+    /* ===== INFO GRID (basic info) ===== */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 14px;
+      margin: 16px 0;
+    }
+    .info-item {
+      background: var(--gold-pale);
+      border: 1px solid #e8d88a;
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .info-item .label {
+      font-weight: 700;
+      font-size: 12px;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+    .info-item .value {
+      font-size: 13.5px;
+      color: #2a1a00;
+    }
+
+    /* ===== DAY CARDS ===== */
+    .day-card {
+      border-radius: 16px;
+      padding: 28px 24px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+    }
+    .day1-card { background: var(--day1-bg); border-top: 5px solid var(--day1); }
+    .day2-card { background: var(--day2-bg); border-top: 5px solid var(--day2); }
+    .day3-card { background: var(--day3-bg); border-top: 5px solid var(--day3); }
+
+    .day-title {
+      font-size: clamp(18px, 4vw, 23px);
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+    .day1-card .day-title { color: var(--day1); }
+    .day2-card .day-title { color: var(--day2); }
+    .day3-card .day-title { color: var(--day3); }
+
+    .day-theme {
+      font-size: 13.5px;
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+    .day1-card .day-theme { background: rgba(26,58,92,0.08); border-left: 3px solid var(--day1); color: #0d2240; }
+    .day2-card .day-theme { background: rgba(92,26,58,0.08); border-left: 3px solid var(--day2); color: #3a0d24; }
+    .day3-card .day-theme { background: rgba(26,92,58,0.08); border-left: 3px solid var(--day3); color: #0d3a1e; }
+
+    .day-card .table-wrap { border-radius: 10px; }
+    .day1-card thead tr { background: var(--day1); }
+    .day2-card thead tr { background: var(--day2); }
+    .day3-card thead tr { background: var(--day3); }
+
+    /* ===== MEAL SUMMARY ===== */
+    .meal-summary {
+      margin-top: 20px;
+      padding: 16px;
+      border-radius: 10px;
+    }
+    .day1-card .meal-summary { background: rgba(26,58,92,0.06); }
+    .day2-card .meal-summary { background: rgba(92,26,58,0.06); }
+    .day3-card .meal-summary { background: rgba(26,92,58,0.06); }
+
+    .meal-summary h4 { margin-top: 0; }
+
+    /* ===== CHECKLIST ===== */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 7px 0;
+      border-bottom: 1px solid #f0ece0;
+      font-size: 14px;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist input[type="checkbox"] {
+      margin-top: 3px;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--navy);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+    .checklist-section { margin-bottom: 24px; }
+    .checklist-section h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--navy);
+      padding: 8px 14px;
+      border-radius: 6px;
+      margin-top: 16px;
+      margin-bottom: 6px;
+    }
+
+    /* ===== TIPS ===== */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .tip-card {
+      background: var(--gold-pale);
+      border: 1px solid #e8d88a;
+      border-radius: 12px;
+      padding: 18px 16px;
+    }
+    .tip-card .tip-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .tip-card .tip-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .tip-card p { font-size: 13px; color: #3a3010; line-height: 1.7; }
+
+    /* ===== TIMELINE ===== */
+    .timeline { margin-top: 16px; }
+    .tl-block {
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 16px;
+    }
+    .tl-now   { background: #ffe5e5; border-left: 5px solid var(--red); }
+    .tl-2m    { background: #fff4e0; border-left: 5px solid #e07800; }
+    .tl-1m    { background: #fffbe0; border-left: 5px solid #c8b800; }
+    .tl-1w    { background: var(--emerald-light); border-left: 5px solid var(--emerald); }
+    .tl-local { background: #e8e0f8; border-left: 5px solid #6a44cc; }
+
+    .tl-block h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .tl-now h3   { color: #8b0000; }
+    .tl-2m h3    { color: #7a3a00; }
+    .tl-1m h3    { color: #5a4a00; }
+    .tl-1w h3    { color: #004d30; }
+    .tl-local h3 { color: #2a1a6e; }
+
+    /* ===== COST SUMMARY ===== */
+    .cost-table tbody tr:last-child td { font-weight: 900; font-size: 15px; background: var(--gold-pale) !important; color: var(--navy); }
+
+    /* ===== PERSONS ===== */
+    .persons-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 16px;
+    }
+    .person-card {
+      background: linear-gradient(135deg, #E8650A 0%, #d05a08 100%);
+      color: var(--white);
+      border-radius: 12px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .person-card .avatar {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    .person-card .name {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+    }
+    .person-card .role {
+      font-size: 11px;
+      background: var(--gold);
+      color: #fff;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+    .person-card p {
+      font-size: 12px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* ===== CONNECTION ===== */
+    .connection-box {
+      background: #E8650A;
+      color: var(--white);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-family: 'Noto Sans JP', monospace;
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      line-height: 2;
+    }
+    .connection-box span { color: #ffd580; font-weight: 700; }
+
+    /* ===== GRUME LIST ===== */
+    .gourmet-rank {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      background: var(--navy);
+      color: var(--gold-light);
+      border-radius: 50%;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    /* ===== OPTIONAL TOUR ===== */
+    .optional-banner {
+      background: linear-gradient(135deg, var(--emerald) 0%, #007a4e 100%);
+      color: var(--white);
+      border-radius: 14px;
+      padding: 24px 24px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 16px rgba(0,168,107,0.25);
+    }
+    .optional-banner h2 {
+      font-size: 20px;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+    .optional-banner blockquote {
+      background: rgba(255,255,255,0.15);
+      border-left-color: var(--gold-light);
+      color: var(--white);
+    }
+
+    /* ===== SPOT TABLE stars ===== */
+    .stars { color: var(--gold); letter-spacing: -1px; }
+
+    /* ===== FOOTER ===== */
+    .site-footer {
+      text-align: center;
+      padding: 28px 16px;
+      background: #E8650A;
+      color: rgba(255,255,255,0.8);
+      font-size: 12px;
+    }
+    .site-footer strong { color: #ffd580; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 600px) {
+      .card { padding: 20px 14px; }
+      .day-card { padding: 18px 12px; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .persons-grid { grid-template-columns: 1fr 1fr; }
+      tbody td, thead th { padding: 9px 10px; font-size: 12px; }
+    }
+
+    /* ===== MOBILE (640px以下) テーブルカード変換 ===== */
+    @media (max-width: 640px) {
+      body { font-size: 15px; }
+
+      .card { padding: 20px 16px; }
+      .day-card { padding: 20px 14px; }
+
+      .info-grid { grid-template-columns: 1fr; }
+      .persons-grid { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+
+      .section-title { font-size: 18px; }
+
+      /* テーブルをブロック要素に変換 */
+      .table-wrap table,
+      .table-wrap thead,
+      .table-wrap tbody,
+      .table-wrap th,
+      .table-wrap td,
+      .table-wrap tr {
+        display: block;
+      }
+
+      /* ヘッダー行を非表示 */
+      .table-wrap thead tr {
+        display: none;
+      }
+
+      /* 各行をカードに */
+      .table-wrap tbody tr {
+        margin-bottom: 12px;
+        border: 1px solid #e0d0c0;
+        border-radius: 10px;
+        overflow: hidden;
+        background: white;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      }
+
+      /* セルスタイル */
+      .table-wrap td {
+        padding: 10px 14px;
+        border-bottom: 1px solid #f0e0d0;
+        font-size: 14px;
+        line-height: 1.6;
+        white-space: normal;
+      }
+
+      .table-wrap td:last-child {
+        border-bottom: none;
+      }
+
+      /* data-labelをbefore疑似要素で表示 */
+      .table-wrap td[data-label]::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        color: #E8650A;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 3px;
+      }
+
+      /* Day別カードの行背景を白固定 */
+      .day1-card .table-wrap tbody tr,
+      .day2-card .table-wrap tbody tr,
+      .day3-card .table-wrap tbody tr {
+        background: white;
+      }
+
+      /* 交互背景・ホバーを無効化 */
+      .table-wrap tbody tr:nth-child(even) { background: white; }
+      .table-wrap tbody tr:hover { background: white; }
+
+      /* 費用サマリーの最終行も対応 */
+      .cost-table tbody tr:last-child td {
+        font-size: 14px;
+      }
+    }
+
+    /* ===== PRINT ===== */
+    @media print {
+      body { background: white; font-size: 11pt; }
+      .site-header {
+        background: #E8650A !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+      .card, .day-card, .optional-banner { box-shadow: none; border: 1px solid #ccc; page-break-inside: avoid; }
+      .day-card { page-break-before: always; }
+      .site-footer { background: #E8650A !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .checklist input[type="checkbox"] { -webkit-print-color-adjust: exact; }
+      thead tr { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      .person-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+      a { text-decoration: none; color: inherit; }
+    }
+
+    /* GALLERY */
+    .gallery-tabs {
+      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px;
+    }
+    .gtab {
+      padding: 8px 20px; border-radius: 999px;
+      border: 2px solid #ddd; background: white;
+      font-size: 13px; font-weight: 700; cursor: pointer;
+      color: #888; transition: all .2s;
+    }
+    .gtab:hover { border-color: var(--navy); color: var(--navy); }
+    .gtab.active { background: var(--navy); border-color: var(--navy); color: white; }
+    .gallery-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+    }
+    .gallery-grid.active { display: grid; }
+    .gallery-grid img {
+      width: 100%; aspect-ratio: 4/3; object-fit: cover;
+      border-radius: 10px; cursor: pointer;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .gallery-grid img:hover { transform: scale(1.03); box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 1000;
+      background: rgba(0,0,0,0.92);
+      align-items: center; justify-content: center; cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox img { max-width: 92vw; max-height: 92vh; border-radius: 8px; object-fit: contain; }
+    #lightbox-close {
+      position: absolute; top: 20px; right: 24px;
+      color: white; font-size: 32px; cursor: pointer; opacity: 0.8;
+    }
+    #lightbox-close:hover { opacity: 1; }
+    @media (max-width: 640px) { .gallery-grid { grid-template-columns: repeat(2, 1fr); } }
+  </style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-flag-bar">
+      <div class="flag-stripe fs-navy"></div>
+      <div class="flag-stripe fs-red"></div>
+      <div class="flag-stripe fs-white"></div>
+      <div class="flag-stripe fs-gold"></div>
+    </div>
+    <div class="header-badge">Malaysia Tour Vol.5</div>
+    <h1>🇲🇾 マレーシアツアー 第5回<br>旅のしおり</h1>
+    <p class="subtitle">🔥 食って・登って・感動して帰ろう</p>
+    <p class="tagline">在住者かっちゃんが案内する「本物のKL」3日間。<br>ガイドブックには絶対載ってへんやつ、全部教えたる！</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ===== ツアー基本情報 ===== -->
+  <section class="card card-navy">
+    <h2 class="section-title">✈️ ツアー基本情報</h2>
+    <div class="info-grid">
+      <div class="info-item"><div><div class="label">📅 日程（確定）</div><div class="value">2026年 9月25日（木）〜 27日（土）2泊3日</div></div></div>
+      <div class="info-item"><div><div class="label">🌏 目的地</div><div class="value">マレーシア・クアラルンプール（KL）</div></div></div>
+      <div class="info-item"><div><div class="label">👥 参加人数</div><div class="value">目標6人（最低5人）</div></div></div>
+      <div class="info-item"><div><div class="label">✈️ 航空券目安（1人）</div><div class="value">約7万円</div></div></div>
+      <div class="info-item"><div><div class="label">🏙️ 現地費用目安（1人）</div><div class="value">約3万円</div></div></div>
+      <div class="info-item"><div><div class="label">💰 合計目安（1人）</div><div class="value">約10万円（人によって前後あり）</div></div></div>
+    </div>
+
+    <blockquote>
+      <strong>「KLで生きるかっちゃんと一緒に、マレーシアの全部を食べて、見て、感じる3日間」</strong><br>
+      観光ガイドブックには載ってへん「在住者目線のKL」を体感するツアー。中華系・インド系・マレー系の <strong>3文化が混在するKL</strong> という街を、食・景色・アクティビティの3軸でぐるっと楽しみ切る！
+    </blockquote>
+
+    <h3>✈️ フライトの選択肢（東京発KL）</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>航空会社</th><th>特徴</th><th>参考料金（往復）</th></tr></thead>
+        <tbody>
+          <tr><td data-label="航空会社">🥇 <strong>エアアジア（AirAsia）</strong></td><td data-label="特徴">KL拠点のLCC。早朝・深夜便あり</td><td data-label="参考料金（往復）">3〜5万円</td></tr>
+          <tr><td data-label="航空会社">✈️ <strong>マレーシア航空（MAS）</strong></td><td data-label="特徴">フルサービス、直行便</td><td data-label="参考料金（往復）">5〜9万円</td></tr>
+          <tr><td data-label="航空会社">🛫 <strong>JAL / ANA</strong></td><td data-label="特徴">快適だが高め</td><td data-label="参考料金（往復）">8〜12万円</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout-tip">💡 <strong>かっちゃんのおすすめ：</strong> エアアジアかマレーシア航空の早朝便！KL到着が早いほど初日がゆったりするで〜</div>
+
+    <h3>🏨 ホテルエリア</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>エリア</th><th>特徴</th><th>宿泊費目安（1泊）</th></tr></thead>
+        <tbody>
+          <tr><td data-label="エリア">🥇 <strong>KLセントラル周辺</strong></td><td data-label="特徴">交通の要所。バトゥケイブへのKTMに便利</td><td data-label="宿泊費目安（1泊）">5,000〜12,000円/室</td></tr>
+          <tr><td data-label="エリア">🥈 <strong>ブキッビンタン</strong></td><td data-label="特徴">繁華街中心。ジャランアロー・パビリオンへ徒歩圏</td><td data-label="宿泊費目安（1泊）">6,000〜15,000円/室</td></tr>
+          <tr><td data-label="エリア">💎 <strong>KLCCエリア</strong></td><td data-label="特徴">ツインタワー目の前。ハイエンド</td><td data-label="宿泊費目安（1泊）">12,000〜25,000円/室</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout-tip">🏠 <strong>グループなら Airbnb も検討あり！</strong> カラオケ or ゲーム設備付きのAirbnbでワイワイするのも最高やで（第2回の学びを活用！）</div>
+  </section>
+
+  <!-- ===== 参加者紹介 ===== -->
+  <section class="card card-gold">
+    <h2 class="section-title">👥 参加者紹介</h2>
+    <div class="persons-grid">
+      <div class="person-card">
+        <div class="avatar">🌟</div>
+        <div class="name">かっちゃん</div>
+        <div class="role">ツアー主催・現地ガイド</div>
+        <p>🇲🇾 マレーシア在住10ヶ月。ノマドビザでフルリモート勤務中。バトゥケイブに<strong style="color:var(--gold-light);">9回</strong>訪問した鉄板ガイド。</p>
+      </div>
+      <div class="person-card">
+        <div class="avatar">🌸</div>
+        <div class="name">ちいちゃん</div>
+        <div class="role">参加者</div>
+        <p>東京在住、元保育士の労務職。<strong style="color:var(--gold-light);">初マレーシア！</strong></p>
+      </div>
+      <div class="person-card">
+        <div class="avatar">🤝</div>
+        <div class="name">マサ</div>
+        <div class="role">参加者</div>
+        <p>アクトハウスでかっちゃんと出会った友人。今回のツアーに参加！</p>
+      </div>
+      <div class="person-card" style="background: linear-gradient(135deg, #3a3a3a 0%, #555 100%);">
+        <div class="avatar">🙋</div>
+        <div class="name">残りのメンバー</div>
+        <div class="role" style="background: #888; color: #fff;">絶賛募集中！</div>
+        <p>目標6人に向けて一緒に行ける仲間を集めてるで！</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===== 過去ツアー振り返り ===== -->
+  <section class="card">
+    <h2 class="section-title">📸 過去ツアーの思い出</h2>
+    <div class="gallery-tabs">
+      <button class="gtab active" onclick="showGallery(event,'g1')">第1回</button>
+      <button class="gtab" onclick="showGallery(event,'g2')">第2回</button>
+      <button class="gtab" onclick="showGallery(event,'g3')">第3回</button>
+      <button class="gtab" onclick="showGallery(event,'g4')">第4回</button>
+    </div>
+
+    <div id="g1" class="gallery-grid active">
+      <img src="photos/1st/2025-09-03_23-35-08_558.jpeg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/1st/2025-09-04_20-05-01_856.jpeg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/1st/2025-09-04_20-05-19_975.jpeg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/1st/2025-09-04_20-05-24_762.jpeg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/1st/2025-09-05_14-51-13_277.jpg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/1st/2025-09-05_23-34-54_701.jpg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/1st/2025-09-06_02-35-10_357.jpg" alt="第1回" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+
+    <div id="g2" class="gallery-grid">
+      <img src="photos/2nd/IMG_8680.jpg" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8717.jpg" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8757.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8765.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8807.jpg" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8825.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8830.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8831.jpg" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8926.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8927.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8936.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/2nd/IMG_8941.JPG" alt="第2回" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+
+    <div id="g3" class="gallery-grid">
+      <img src="photos/3rd/DSC06593.JPG" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/3rd/IMG_2797.JPG" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/3rd/IMG_9927.jpg" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/3rd/IMG_9938.jpg" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/3rd/IMG_9941.jpg" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/3rd/IMG_9942.jpg" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/3rd/IMG_9951.jpg" alt="第3回" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+
+    <div id="g4" class="gallery-grid">
+      <img src="photos/4th/071F958B-9DD1-4362-B66C-8341EA568619.JPEG" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/2D46BA37-451D-4C07-BAE6-7CF42BA144C8.JPEG" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/99AD5134-0B59-49A4-9F46-13AEF8AA6FC8.JPEG" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/C6F0817F-4778-408D-9A3A-16285CDA7BFB.JPEG" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/DSC06036 4.JPG" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/IMG_1405.jpg" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/IMG_1408.jpg" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+      <img src="photos/4th/IMG_1414.jpg" alt="第4回" loading="lazy" onclick="openLightbox(this.src)">
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" onclick="closeLightbox()">
+    <span id="lightbox-close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img" src="" alt="">
+  </div>
+  <script>
+    function showGallery(e, id) {
+      document.querySelectorAll('.gallery-grid').forEach(el => el.classList.remove('active'));
+      document.querySelectorAll('.gtab').forEach(el => el.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      e.target.classList.add('active');
+    }
+    function openLightbox(src) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+  </script>
+
+  <!-- ===== スケジュール ===== -->
+  <section class="card">
+    <h2 class="section-title">📅 2泊3日スケジュール</h2>
+
+    <!-- Day 1 -->
+    <div class="day-card day1-card">
+      <div class="day-title">Day 1 🌆 ── 中華＆映えグルメ導入DAY</div>
+      <div class="day-theme">
+        <strong>テーマ：KLに降り立ったら、まずチャイナタウンと屋台でKLを感じろ！</strong><br>
+        初日はKLという街の空気感に慣れる日。歴史的な街並み → 午後はゆっくり休憩 → 夜は屋台街で食べ倒し → そして夜のツインタワー。「やっぱKL最高やな」と全員が思う完璧な初日！
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>⏰ 時間</th><th>📍 スポット</th><th>🎯 内容・見どころ</th><th>💰 料金</th><th>⌛ 所要</th></tr></thead>
+          <tbody>
+            <tr><td data-label="時間">9:00〜10:30</td><td data-label="スポット"><strong>空港到着・ホテルへ</strong></td><td data-label="内容・見どころ">KLIAに到着 → グラブで2〜3台に分かれてホテルへ。SIM購入は到着ロビーで忘れずに！</td><td data-label="料金">グラブ代</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">10:30〜11:00</td><td data-label="スポット">☕ <strong>ママックで朝食</strong></td><td data-label="内容・見どころ">KL最初の一食はローカルのインド系24時間食堂「ママック」で！ロティチャナイ＋テー・タリックでKLの日常を味わう</td><td data-label="料金">RM5〜8（約170〜270円）</td><td data-label="所要">30min</td></tr>
+            <tr><td data-label="時間">11:00〜12:30</td><td data-label="スポット">🏛️ <strong>チャイナタウン（ペタリン通り）散策</strong></td><td data-label="内容・見どころ">陳氏書院・スリ・マハ・マリアマン寺院を歩く。かっちゃんガイドで歴史背景を解説</td><td data-label="料金">無料</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">12:30〜13:30</td><td data-label="スポット">🍗 <strong>南香（Nam Heong）でランチ</strong></td><td data-label="内容・見どころ">創業60年超の老舗！蒸し鶏と旨みたっぷりスープが絶品。チャイナタウンの名店中の名店</td><td data-label="料金">RM15〜20（約500〜700円）</td><td data-label="所要">1h</td></tr>
+            <tr><td data-label="時間">13:30〜15:00</td><td data-label="スポット">🛍️ <strong>セントラルマーケット散策</strong></td><td data-label="内容・見どころ">バティック布・錫製品・雑貨のショッピング。お土産の下見も兼ねて。エアコン完備で快適！</td><td data-label="料金">無料（買物費別）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">15:00〜16:30</td><td data-label="スポット">☔ <strong>スコール対策タイム（カフェ休憩）</strong></td><td data-label="内容・見どころ">この時間帯はスコールが多い！カフェでのんびりしながらかっちゃんのKL生活トークを聞こう</td><td data-label="料金">カフェ代のみ</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">16:30〜18:00</td><td data-label="スポット">📸 <strong>ムルデカ広場散策</strong></td><td data-label="内容・見どころ">KL独立の象徴・ムルデカ広場＆スルタン・アブドゥル・サマド建物。英国植民地時代の建築が美しく映え写真が最高に撮れる！</td><td data-label="料金">無料</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">18:30〜21:00</td><td data-label="スポット">🍢 <strong>ジャランアロー屋台街で夕食</strong></td><td data-label="内容・見どころ">ブキッビンタン徒歩5分の全長300m屋台街！<strong>黄亜華小食店のチキンウィングは絶対食べること</strong>。海鮮炒め・ミーゴレン・マンゴースムージーで食べ歩き天国</td><td data-label="料金">RM30〜50（約1,000〜1,700円）</td><td data-label="所要">2.5h</td></tr>
+            <tr><td data-label="時間">21:00〜22:30</td><td data-label="スポット">✨ <strong>KLCCパーク＆ツインタワー夜景</strong></td><td data-label="内容・見どころ">KLの象徴・ペトロナスツインタワーを外からじっくり鑑賞。<strong>21:00の噴水ショーは圧巻！</strong> 無料で最高の夜景。全員で記念撮影</td><td data-label="料金">無料</td><td data-label="所要">1.5h</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="meal-summary">
+        <h4>🍽️ Day 1 食事まとめ</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>食事</th><th>店名・場所</th><th>おすすめメニュー</th><th>予算/人</th></tr></thead>
+            <tbody>
+              <tr><td data-label="食事">🌅 朝食</td><td data-label="店名・場所">ホテル近くのママック</td><td data-label="おすすめメニュー">ロティチャナイ＋テー・タリック</td><td data-label="予算/人">RM5〜8（約170〜270円）</td></tr>
+              <tr><td data-label="食事">☀️ ランチ</td><td data-label="店名・場所"><strong>南香（Nam Heong）</strong>@チャイナタウン</td><td data-label="おすすめメニュー">海南チキンライス（蒸し鶏）＋スープ</td><td data-label="予算/人">RM15〜20（約500〜700円）</td></tr>
+              <tr><td data-label="食事">🌙 夕食</td><td data-label="店名・場所"><strong>ジャランアロー屋台街</strong></td><td data-label="おすすめメニュー">チキンウィング・海鮮炒め・ミーゴレン食べ歩き</td><td data-label="予算/人">RM30〜50（約1,000〜1,700円）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 2 -->
+    <div class="day-card day2-card">
+      <div class="day-title">Day 2 🕌 ── インド文化＆KLの絶景DAY</div>
+      <div class="day-theme">
+        <strong>テーマ：かっちゃんが9回訪れた聖地バトゥケイブと、マレーシアの天空へ！</strong><br>
+        ツアーの核心。「何度来てもええもんはええんや」とかっちゃんが言い続けたバトゥケイブへ。272段の階段を全員で登り、洞窟の奥まで行ったるで！夜はツインタワー展望台から空を見上げる。最も「KLに来た」を実感できる最高の1日！
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>⏰ 時間</th><th>📍 スポット</th><th>🎯 内容・見どころ</th><th>💰 料金</th><th>⌛ 所要</th></tr></thead>
+          <tbody>
+            <tr><td data-label="時間">7:45〜8:30</td><td data-label="スポット">🥞 <strong>ブリックフィールズ（リトルインディア）朝食</strong></td><td data-label="内容・見どころ">かっちゃん行きつけのローカルママックでロティチャナイ＋テー・タリック朝食。リトルインディアの空気感も体感！</td><td data-label="料金">RM5〜8（約170〜270円）</td><td data-label="所要">45min</td></tr>
+            <tr><td data-label="時間">8:45〜10:15</td><td data-label="スポット">🏔️ <strong>バトゥケイブ（午前の聖地体験）</strong></td><td data-label="内容・見どころ">KTMでKLセントラルから約30分（RM2.5）。<strong>43mの金色ムルガン像</strong>前で記念撮影 → <strong>272段カラフル階段</strong>を登る → <strong>洞窟内のヒンドゥー寺院</strong>まで必ず入ること！かっちゃん9回訪問の全知識で完全ガイド。⚠️ 野生のサルに食べ物は渡さないこと</td><td data-label="料金">RM2.5（KTM往復）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">10:15〜11:00</td><td data-label="スポット">🛕 <strong>バトゥケイブ周辺の小寺院散策</strong></td><td data-label="内容・見どころ">かっちゃんお気に入りの「観光客が来ない小さなヒンドゥー寺院」を見学。本当のバトゥケイブの魅力はここにある！</td><td data-label="料金">無料</td><td data-label="所要">45min</td></tr>
+            <tr><td data-label="時間">11:30〜13:00</td><td data-label="スポット">🍛 <strong>バナナリーフカレーランチ</strong></td><td data-label="内容・見どころ">ブリックフィールズで南インド式ランチ。バナナの葉の上にカレーがどかっと盛られる。手で食べるのがマナー！視覚的インパクト抜群</td><td data-label="料金">RM15〜25（約500〜850円）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">13:30〜15:00</td><td data-label="スポット">🕌 <strong>イスラム美術館</strong></td><td data-label="内容・見どころ">中華・インドと来たら最後はマレー・イスラムで3文化コンプリート！建物自体もフォトジェニック</td><td data-label="料金">RM14〜20（約480〜680円）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">15:00〜16:30</td><td data-label="スポット">🛍️ <strong>スコール対策タイム（スリアKLCCで休憩）</strong></td><td data-label="内容・見どころ">ツインタワー地下モールでショッピング＆休憩。夜の展望台に備えて英気を養う！</td><td data-label="料金">無料（買物費別）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">19:00〜20:30</td><td data-label="スポット">🍲 <strong>バクテーディナー</strong></td><td data-label="内容・見どころ">Sun Fong Bak Kut Teh等で中華薬膳豚肉スープを堪能。漢方スパイスが効いた深みある味でKLの夜を締める！</td><td data-label="料金">RM15〜25（約500〜850円）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">21:00〜22:30</td><td data-label="スポット">✨ <strong>ペトロナスツインタワー展望台</strong></td><td data-label="内容・見どころ">86階・約370mの展望デッキから360度の夜景！41〜42階のスカイブリッジも含む。KLの夜景をこの目に焼き付けろ！<strong>要事前予約（Klook/VELTRAで日本から購入可）</strong></td><td data-label="料金">RM80（約2,700円）</td><td data-label="所要">1.5h</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="meal-summary">
+        <h4>🍽️ Day 2 食事まとめ</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>食事</th><th>店名・場所</th><th>おすすめメニュー</th><th>予算/人</th></tr></thead>
+            <tbody>
+              <tr><td data-label="食事">🌅 朝食</td><td data-label="店名・場所">ブリックフィールズのママック（かっちゃん行きつけ）</td><td data-label="おすすめメニュー">ロティチャナイ＋テー・タリック</td><td data-label="予算/人">RM5〜8（約170〜270円）</td></tr>
+              <tr><td data-label="食事">☀️ ランチ</td><td data-label="店名・場所"><strong>バナナリーフカレー専門店</strong>@ブリックフィールズ</td><td data-label="おすすめメニュー">南インド式カレー定食（バナナリーフ盛り）</td><td data-label="予算/人">RM15〜25（約500〜850円）</td></tr>
+              <tr><td data-label="食事">🌙 夕食</td><td data-label="店名・場所"><strong>Sun Fong Bak Kut Teh</strong>（または同種の店）</td><td data-label="おすすめメニュー">豚肉の漢方スープ（バクテー）＋白飯</td><td data-label="予算/人">RM15〜25（約500〜850円）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day 3 -->
+    <div class="day-card day3-card">
+      <div class="day-title">Day 3 🛍️ ── マレー文化＋空中体験＆帰国DAY</div>
+      <div class="day-theme">
+        <strong>テーマ：最後は空から、KLに別れを告げる</strong><br>
+        最終日も油断せず詰め込む！地上300mのKLタワー・スカイボックスで空中散歩したら、マレー系の食文化で旅を締め、お土産を買い込んで帰国。「次もまた来たい！」で終われる最高の締めくくり！
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>⏰ 時間</th><th>📍 スポット</th><th>🎯 内容・見どころ</th><th>💰 料金</th><th>⌛ 所要</th></tr></thead>
+          <tbody>
+            <tr><td data-label="時間">8:00〜9:00</td><td data-label="スポット">🍚 <strong>ナシレマ朝食</strong></td><td data-label="内容・見どころ">かっちゃんご推薦のローカル屋台でマレーシアの国民食・ナシレマ。ココナッツミルクご飯＋サンバル＋アンチョビ＋ゆで卵。「これが毎朝の日常や」というかっちゃんの一言が刺さる</td><td data-label="料金">RM5〜12（約170〜400円）</td><td data-label="所要">1h</td></tr>
+            <tr><td data-label="時間">9:30〜11:00</td><td data-label="スポット">🏘️ <strong>カンポン・バル地区散策</strong></td><td data-label="内容・見どころ">マレー系の歴史ある住宅地。ローカルカフェ・伝統菓子店が並ぶ。観光客が来ないリアルなマレー系生活文化を体感！</td><td data-label="料金">無料</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">11:00〜13:00</td><td data-label="スポット">🗼 <strong>KLタワー スカイボックス体験</strong></td><td data-label="内容・見どころ"><strong>地上300mの全面ガラス張り張り出しスペース！</strong> 足元が透明でスリル満点。昨夜上ったツインタワーを今度は横から見る感動。<strong>要事前予約</strong></td><td data-label="料金">RM140（約4,800円）</td><td data-label="所要">2h</td></tr>
+            <tr><td data-label="時間">13:00〜14:30</td><td data-label="スポット">🍜 <strong>パビリオン フードコートでランチ</strong></td><td data-label="内容・見どころ">ブキッビンタン最大のモール内フードコート。カレーラクサ・チャーコイティウ・ナシゴレンなど、まだ食べてないものをチェックリストで消化！</td><td data-label="料金">RM15〜30（約500〜1,000円）</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">14:30〜16:00</td><td data-label="スポット">🛍️ <strong>最終お土産ショッピング</strong></td><td data-label="内容・見どころ">パビリオン or セントラルマーケット。マレーシアコーヒー（ホワイトコーヒー）・チョコレート・バティック雑貨・錫製品など</td><td data-label="料金">買物費のみ</td><td data-label="所要">1.5h</td></tr>
+            <tr><td data-label="時間">16:00〜17:00</td><td data-label="スポット">✈️ <strong>グラブ or KLIAエクスプレスで空港へ</strong></td><td data-label="内容・見どころ">KLIAエクスプレス（RM55・28分）またはグラブ（RM80〜120・45〜60分）。フライト2〜3時間前には空港着を目標に！</td><td data-label="料金">RM55〜120</td><td data-label="所要">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="meal-summary">
+        <h4>🍽️ Day 3 食事まとめ</h4>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>食事</th><th>店名・場所</th><th>おすすめメニュー</th><th>予算/人</th></tr></thead>
+            <tbody>
+              <tr><td data-label="食事">🌅 朝食</td><td data-label="店名・場所">かっちゃんご推薦のローカル屋台</td><td data-label="おすすめメニュー">ナシレマ＋テー・タリック</td><td data-label="予算/人">RM5〜12（約170〜400円）</td></tr>
+              <tr><td data-label="食事">☀️ ランチ</td><td data-label="店名・場所"><strong>パビリオン フードコート</strong>@ブキッビンタン</td><td data-label="おすすめメニュー">カレーラクサ・チャーコイティウ・ナシゴレンなど</td><td data-label="予算/人">RM15〜30（約500〜1,000円）</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== グルメ10選 ===== -->
+  <section class="card card-emerald">
+    <h2 class="section-title">🍜 絶対食べるべきマレーシアグルメ10選</h2>
+    <blockquote>3日間で全部コンプリートを目指せ！チェックしながら食べ歩こう 🍽️</blockquote>
+    <div class="table-wrap">
+      <table class="table-emerald">
+        <thead><tr><th>#</th><th>料理名</th><th>説明</th><th>値段目安</th><th>おすすめ店・場所</th></tr></thead>
+        <tbody>
+          <tr><td data-label="No."><span class="gourmet-rank">1</span></td><td data-label="料理名">🥙 <strong>ロティチャナイ＋テー・タリック</strong></td><td data-label="説明">インド系の薄焼きパン＋チャイ。KLの日常の朝ごはん。これを食べたらKL市民や！</td><td data-label="値段目安">RM5〜8</td><td data-label="おすすめ店・場所">ブリックフィールズのママック</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">2</span></td><td data-label="料理名">🍗 <strong>海南チキンライス</strong></td><td data-label="説明">蒸し鶏と旨みたっぷりスープ。創業60年超の老舗の味は別格</td><td data-label="値段目安">RM15〜20</td><td data-label="おすすめ店・場所"><strong>南香（Nam Heong）</strong>@チャイナタウン</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">3</span></td><td data-label="料理名">🍗 <strong>チキンウィング（焼き鳥）</strong></td><td data-label="説明">ジャランアロー名物！香ばしく焼かれた鶏の手羽先。みんな絶対好きなやつ</td><td data-label="値段目安">RM15〜25</td><td data-label="おすすめ店・場所"><strong>ジャランアロー 黄亜華小食店</strong></td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">4</span></td><td data-label="料理名">🍳 <strong>ミーゴレン</strong></td><td data-label="説明">マレー風焼きそば。スパイスが効いてて癖になる旨さ。屋台の定番</td><td data-label="値段目安">RM10〜15</td><td data-label="おすすめ店・場所">ジャランアロー屋台街</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">5</span></td><td data-label="料理名">🍛 <strong>バナナリーフカレー（南インド式）</strong></td><td data-label="説明">バナナの葉の上に直接盛り付け！手で食べるのが正解。視覚的インパクト抜群</td><td data-label="値段目安">RM15〜25</td><td data-label="おすすめ店・場所">ブリックフィールズの南インド料理店</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">6</span></td><td data-label="料理名">🍲 <strong>バクテー（Bak Kut Teh）</strong></td><td data-label="説明">中華薬膳豚肉スープ。漢方スパイスが効いた深みある味でKLの夜を締める</td><td data-label="値段目安">RM15〜25</td><td data-label="おすすめ店・場所"><strong>Sun Fong Bak Kut Teh</strong></td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">7</span></td><td data-label="料理名">🍚 <strong>ナシレマ</strong></td><td data-label="説明">マレーシアの国民食！ ココナッツミルクご飯＋サンバル＋アンチョビ＋ゆで卵。朝食の定番</td><td data-label="値段目安">RM3〜8</td><td data-label="おすすめ店・場所">かっちゃんご推薦ローカル屋台</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">8</span></td><td data-label="料理名">🍜 <strong>カレーラクサ</strong></td><td data-label="説明">ヤシミルク入りのスパイシーなカレースープ麺。マレーシア独特の一杯</td><td data-label="値段目安">RM10〜15</td><td data-label="おすすめ店・場所">パビリオン フードコート</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">9</span></td><td data-label="料理名">🧋 <strong>テー・タリック</strong></td><td data-label="説明">泡立てた濃厚ミルクティー。毎日飲みたくなる甘みと香り。高く注いで泡を作るのが醍醐味</td><td data-label="値段目安">RM2〜4</td><td data-label="おすすめ店・場所">ママック・屋台どこでも</td></tr>
+          <tr><td data-label="No."><span class="gourmet-rank">10</span></td><td data-label="料理名">🥭 <strong>マンゴースムージー</strong></td><td data-label="説明">南国の甘くて濃厚なマンゴーをそのままドリンクに。ジャランアローで必飲！</td><td data-label="値段目安">RM5〜8</td><td data-label="おすすめ店・場所">ジャランアロー屋台街</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout-warning" style="margin-top:20px;">
+      <strong>😤 チャレンジメニュー（勇気があれば！）</strong><br>
+      👑 <strong>ドリアン（durian）</strong>：「果物の王様」。強烈な臭いだが味は絶品。かっちゃんのガイドで挑戦せよ！<br>
+      🐸 <strong>カエルの粥（蛙粥）</strong>：チャイナタウン周辺で食べられる珍品。第5回の話のネタになること確実！
+    </div>
+  </section>
+
+  <!-- ===== スポット早見表 ===== -->
+  <section class="card">
+    <h2 class="section-title">📍 スポット早見表</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>スポット名</th><th>エリア</th><th>料金</th><th>所要時間</th><th>おすすめ度</th></tr></thead>
+        <tbody>
+          <tr><td data-label="スポット名">🏛️ チャイナタウン（ペタリン通り）</td><td data-label="エリア">チャイナタウン</td><td data-label="料金">無料</td><td data-label="所要時間">1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★★</span></td></tr>
+          <tr><td data-label="スポット名">🏛️ セントラルマーケット</td><td data-label="エリア">チャイナタウン</td><td data-label="料金">無料</td><td data-label="所要時間">1〜1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★</span>☆</td></tr>
+          <tr><td data-label="スポット名">📸 ムルデカ広場</td><td data-label="エリア">KL市内</td><td data-label="料金">無料</td><td data-label="所要時間">1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★</span>☆</td></tr>
+          <tr><td data-label="スポット名">🍢 ジャランアロー屋台街</td><td data-label="エリア">ブキッビンタン</td><td data-label="料金">無料（食事費別）</td><td data-label="所要時間">2〜3h</td><td data-label="おすすめ度"><span class="stars">★★★★★</span></td></tr>
+          <tr><td data-label="スポット名">✨ KLCCパーク（ツインタワー外観）</td><td data-label="エリア">KLCC</td><td data-label="料金">無料</td><td data-label="所要時間">1〜1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★★</span></td></tr>
+          <tr><td data-label="スポット名">🏔️ バトゥケイブ</td><td data-label="エリア">KL郊外</td><td data-label="料金">無料（KTM往復RM2.5）</td><td data-label="所要時間">2h</td><td data-label="おすすめ度"><span class="stars">★★★★★</span></td></tr>
+          <tr><td data-label="スポット名">🕌 イスラム美術館</td><td data-label="エリア">KLセントラル近く</td><td data-label="料金">RM14〜20</td><td data-label="所要時間">1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★</span>☆</td></tr>
+          <tr><td data-label="スポット名">✨ ペトロナスツインタワー展望台</td><td data-label="エリア">KLCC</td><td data-label="料金">RM80（約2,700円）</td><td data-label="所要時間">1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★★</span></td></tr>
+          <tr><td data-label="スポット名">🗼 KLタワー スカイボックス</td><td data-label="エリア">KL市内</td><td data-label="料金">RM140（約4,800円）</td><td data-label="所要時間">2h</td><td data-label="おすすめ度"><span class="stars">★★★★★</span></td></tr>
+          <tr><td data-label="スポット名">🏘️ カンポン・バル地区</td><td data-label="エリア">KL市内</td><td data-label="料金">無料</td><td data-label="所要時間">1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★</span>☆</td></tr>
+          <tr><td data-label="スポット名">🛍️ パビリオン フードコート</td><td data-label="エリア">ブキッビンタン</td><td data-label="料金">無料（食事費別）</td><td data-label="所要時間">1〜1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★</span>☆</td></tr>
+          <tr><td data-label="スポット名">🔨 ロイヤルセランゴール錫工場</td><td data-label="エリア">KL郊外</td><td data-label="料金">見学無料（体験有料）</td><td data-label="所要時間">1.5h</td><td data-label="おすすめ度"><span class="stars">★★★★</span>☆</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== 現地お役立ち情報 ===== -->
+  <section class="card card-navy">
+    <h2 class="section-title">💡 現地お役立ち情報</h2>
+
+    <h3>🚌 移動手段まとめ</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>手段</th><th>使う場面</th><th>料金目安</th></tr></thead>
+        <tbody>
+          <tr><td data-label="手段">📱 <strong>グラブ（Grab）</strong></td><td data-label="使う場面">ホテル〜各スポット間。グループで1〜2台乗り分け</td><td data-label="料金目安">KLセントラル→バトゥケイブ RM30〜50 / KLセントラル→ブキッビンタン RM10</td></tr>
+          <tr><td data-label="手段">🚂 <strong>KTMコミューター</strong></td><td data-label="使う場面">KLセントラル↔バトゥケイブ（最安！）</td><td data-label="料金目安">往復RM2.5</td></tr>
+          <tr><td data-label="手段">🚇 <strong>MRT / LRT</strong></td><td data-label="使う場面">KLCC・ブキッビンタン間など市内移動</td><td data-label="料金目安">RM1.70〜2.40</td></tr>
+          <tr><td data-label="手段">🚅 <strong>KLIAエクスプレス</strong></td><td data-label="使う場面">帰国時の空港移動（速くて確実）</td><td data-label="料金目安">RM55（28分）</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>💴 通貨・両替</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td data-label="項目">💱 <strong>通貨</strong></td><td data-label="内容">マレーシアリンギット（RM）。1RM ≈ 34円（2026年6月現在）</td></tr>
+          <tr><td data-label="項目">💳 <strong>クレカ</strong></td><td data-label="内容">大型モール・レストランはほぼ使える</td></tr>
+          <tr><td data-label="項目">💵 <strong>現金</strong></td><td data-label="内容">ローカル屋台・ママックは現金が多い。RM100〜200は常に持っておくと安心</td></tr>
+          <tr><td data-label="項目">🏦 <strong>両替</strong></td><td data-label="内容">空港より市内両替所（ブキッビンタン周辺）の方がレートが良い場合多い</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>📡 WiFi・SIM</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td data-label="項目">📱 <strong>SIM購入</strong></td><td data-label="内容">空港到着ロビーで即購入！Maxis / Digi / Celcom。1週間で約1,000〜1,500円</td></tr>
+          <tr><td data-label="項目">📶 <strong>通信状況</strong></td><td data-label="内容">KL市内はほぼ全域でLTE電波良好</td></tr>
+          <tr><td data-label="項目">💻 <strong>WiFi</strong></td><td data-label="内容">カフェ・モールは大体無料WiFiあり</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>☔ 9月の天気</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th></tr></thead>
+        <tbody>
+          <tr><td data-label="項目">🌡️ <strong>気温</strong></td><td data-label="内容">28〜32度（一年中夏！）</td></tr>
+          <tr><td data-label="項目">⛈️ <strong>スコール</strong></td><td data-label="内容">特に15:00〜17:00頃に集中。30分〜1時間で止むことが多い</td></tr>
+          <tr><td data-label="項目">😮‍💨 <strong>ヘイズ（煙害）</strong></td><td data-label="内容">8〜10月に発生しやすい。N95マスクを念のため持参</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>📞 緊急連絡先</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>用途</th><th>番号</th></tr></thead>
+        <tbody>
+          <tr><td data-label="用途">🚨 <strong>警察</strong></td><td data-label="番号">999</td></tr>
+          <tr><td data-label="用途">🚑 <strong>救急</strong></td><td data-label="番号">999</td></tr>
+          <tr><td data-label="用途">🏥 <strong>観光客向け警察（POLIS PELANCONGAN）</strong></td><td data-label="番号">03-2149 6590</td></tr>
+          <tr><td data-label="用途">🇯🇵 <strong>在マレーシア日本国大使館</strong></td><td data-label="番号">03-2177 2600</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>📱 便利アプリ</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>アプリ</th><th>用途</th></tr></thead>
+        <tbody>
+          <tr><td data-label="アプリ">🚗 <strong>Grab</strong></td><td data-label="用途">配車・フード注文。日本でインストール＆カード登録まで済ませておく！</td></tr>
+          <tr><td data-label="アプリ">🎫 <strong>Klook</strong></td><td data-label="用途">各種チケット予約（ツインタワー・KLタワー等）</td></tr>
+          <tr><td data-label="アプリ">🎫 <strong>VELTRA</strong></td><td data-label="用途">チケット予約（Klookとセットで比較）</td></tr>
+          <tr><td data-label="アプリ">🗺️ <strong>Google Maps</strong></td><td data-label="用途">オフラインマップをDLしておく</td></tr>
+          <tr><td data-label="アプリ">💱 <strong>XE Currency</strong></td><td data-label="用途">両替レート確認に便利</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== 持ち物チェックリスト ===== -->
+  <section class="card card-red">
+    <h2 class="section-title">🎒 持ち物チェックリスト</h2>
+
+    <div class="checklist-section">
+      <h3>必需品</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="c1"><label for="c1">🛂 パスポート（残り6ヶ月以上の有効期限）</label></li>
+        <li><input type="checkbox" id="c2"><label for="c2">💳 クレジットカード（海外対応）</label></li>
+        <li><input type="checkbox" id="c3"><label for="c3">💴 現金（円）→空港 or 現地で両替</label></li>
+        <li><input type="checkbox" id="c4"><label for="c4">📱 スマートフォン</label></li>
+        <li><input type="checkbox" id="c5"><label for="c5">🔌 変換プラグ（マレーシアはBF型、日本のA型とは異なる）</label></li>
+        <li><input type="checkbox" id="c6"><label for="c6">🔋 モバイルバッテリー（グラブ・写真でバッテリー消費が速い！）</label></li>
+      </ul>
+    </div>
+
+    <div class="checklist-section">
+      <h3>衣類</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="c7"><label for="c7">👕 Tシャツ・半袖（3〜4枚）</label></li>
+        <li><input type="checkbox" id="c8"><label for="c8">👖 ショートパンツ or 薄手のパンツ</label></li>
+        <li><input type="checkbox" id="c9"><label for="c9">🧥 <strong>薄手のカーディガン（必須！）</strong> 室内冷房が強烈。凍えます</label></li>
+        <li><input type="checkbox" id="c10"><label for="c10">👟 歩きやすいスニーカー（バトゥケイブの階段に備えて）</label></li>
+        <li><input type="checkbox" id="c11"><label for="c11">🧣 <strong>ゆったりしたスカーフ or サロン</strong> 寺院入場時の服装規定対応（現地でも貸し出しあり）</label></li>
+      </ul>
+    </div>
+
+    <div class="checklist-section">
+      <h3>衛生・健康</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="c12"><label for="c12">☀️ 日焼け止め（SPF50以上推奨。紫外線は日本の夏より強い！）</label></li>
+        <li><input type="checkbox" id="c13"><label for="c13">☂️ <strong>折りたたみ傘またはレインコート</strong>（スコール対策）</label></li>
+        <li><input type="checkbox" id="c14"><label for="c14">💊 常備薬（胃腸薬・頭痛薬・絆創膏）</label></li>
+        <li><input type="checkbox" id="c15"><label for="c15">😷 <strong>N95マスク（1〜2枚）</strong>（ヘイズ発生時に備えて）</label></li>
+        <li><input type="checkbox" id="c16"><label for="c16">💧 ペットボトルの水（常時携帯。脱水注意！）</label></li>
+      </ul>
+    </div>
+
+    <div class="checklist-section">
+      <h3>デジタル</h3>
+      <ul class="checklist">
+        <li><input type="checkbox" id="c17"><label for="c17">📱 Grab アプリ（日本でインストール＆カード登録まで！）</label></li>
+        <li><input type="checkbox" id="c18"><label for="c18">🎫 Klook / VELTRA アプリ（チケット事前購入用）</label></li>
+        <li><input type="checkbox" id="c19"><label for="c19">🗺️ Google Maps（オフラインマップDL推奨）</label></li>
+        <li><input type="checkbox" id="c20"><label for="c20">📷 カメラ（映えスポット多数！）</label></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== かっちゃんTIPS ===== -->
+  <section class="card card-gold">
+    <h2 class="section-title">⭐ かっちゃんのとっておきTIPS</h2>
+    <blockquote>マレーシア在住10ヶ月・バトゥケイブ9回訪問のかっちゃんだから言える、在住者目線のリアルアドバイスや！</blockquote>
+    <div class="tips-grid">
+      <div class="tip-card">
+        <div class="tip-num">Tip 1</div>
+        <div class="tip-title">🕐 スコールは「敵」じゃなくて「休憩のサイン」</div>
+        <p>午後3〜4時頃に急に空が暗くなったら、それがKLのリズムや。慌てて走らんと、近くのカフェに入ってゆっくりテー・タリックでも飲んで待ったらええ。だいたい30分〜1時間で止む。むしろそれが現地の過ごし方やで。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 2</div>
+        <div class="tip-title">🐒 バトゥケイブのサルに食べ物は渡したらアカン</div>
+        <p>かわいく見えるけど、彼らはプロや。バッグを引っ張ったり、手に持ったものを奪ったりする。特にビニール袋は危ない。食べ物・飲み物は閉まったリュックに入れて歩こう。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 3</div>
+        <div class="tip-title">🚗 グラブは日本でアプリとカード登録まで済ませておくこと</div>
+        <p>現地でSIMを入れた瞬間から使えるようにしておくのが最強。「グラブ起動できない」は一番困るやつ。クレカ登録は日本の方が通信環境安定してるから日本でやっておいて！</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 4</div>
+        <div class="tip-title">🌡️ 室内の冷房は「北極」やと思って</div>
+        <p>モール・電車・レストランの冷房は日本より遥かに強い。「外は灼熱・中は冷凍庫」の繰り返しで体調崩す人が多いんよ。薄手のカーディガンは必ずバッグに入れておいて！</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 5</div>
+        <div class="tip-title">💱 両替は市内の方が絶対レートが良い</div>
+        <p>空港の両替所は便利やけどレートが悪い。到着時は最低限RM50〜100だけ両替して、翌日ブキッビンタン周辺の両替所に行く方がお得。現地ATMも悪くないけど手数料に注意。</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 6</div>
+        <div class="tip-title">🛕 バトゥケイブの本当の魅力は「小寺院」にある</div>
+        <p>272段の大階段・金色のムルガン像は有名やけど、観光客が来ない周辺の小さなヒンドゥー寺院こそが本物やと思う。9回来ても毎回新しい発見がある。かっちゃんが連れてったるで！</p>
+      </div>
+      <div class="tip-card">
+        <div class="tip-num">Tip 7</div>
+        <div class="tip-title">🍽️ ママックは「いつでも行ける場所」やけど「毎回感動できる場所」</div>
+        <p>24時間営業のインド系食堂「ママック」はKL市民の日常そのもの。ロティチャナイのサクッとした食感＋テー・タリックの甘み、これが「KLの日常の味」や。何気なく立ち寄った瞬間にKLへの愛が深まるはず！</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== 事前準備タイムライン ===== -->
+  <section class="card">
+    <h2 class="section-title">🗓️ 事前準備タイムライン</h2>
+    <div class="timeline">
+
+      <div class="tl-block tl-now">
+        <h3>🟥 今すぐ（旅行日決定次第）</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="t1"><label for="t1">✈️ <strong>飛行機の予約</strong>（9/25〜27）早い者勝ちで安くなる！</label></li>
+          <li><label style="opacity:0.6;">🏨 <strong>宿泊の予約</strong>（✅ 予約済み）</label></li>
+          <li><input type="checkbox" id="t3"><label for="t3">🛂 <strong>パスポートの有効期限確認</strong>（残り6ヶ月以上必要）</label></li>
+        </ul>
+      </div>
+
+      <div class="tl-block tl-2m">
+        <h3>🟧 旅行2ヶ月前まで</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="t4"><label for="t4">🎫 <strong>ツインタワー展望台チケット予約</strong>（Klook/VELTRAで！人気のため売り切れ注意⚠️）→ <strong>かっちゃん担当</strong></label></li>
+          <li><input type="checkbox" id="t5"><label for="t5">🎫 <strong>KLタワー スカイボックスチケット予約</strong>（同上）→ <strong>かっちゃん担当</strong></label></li>
+
+        </ul>
+      </div>
+
+      <div class="tl-block tl-1m">
+        <h3>🟨 旅行1ヶ月前まで</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="t7"><label for="t7">📱 <strong>グラブ（Grab）アプリのインストール＆クレジットカード登録</strong>（日本でできる！）</label></li>
+          <li><input type="checkbox" id="t8"><label for="t8">🎫 <strong>Klook or VELTRAアプリ登録</strong>（チケット事前購入に使う）</label></li>
+          <li><input type="checkbox" id="t9"><label for="t9">💴 <strong>両替の準備</strong> or 海外対応クレジットカード確認</label></li>
+        </ul>
+      </div>
+
+      <div class="tl-block tl-1w">
+        <h3>🟩 旅行1週間前まで</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="t10"><label for="t10">📦 <strong>荷造り開始</strong>（カーディガン・折りたたみ傘・N95マスク忘れずに！）</label></li>
+          <li><input type="checkbox" id="t11"><label for="t11">🗺️ <strong>Google MapsのKLオフラインマップDL</strong></label></li>
+          <li><input type="checkbox" id="t12"><label for="t12">🤝 <strong>LINEグループで最終確認</strong>→ <strong>かっちゃん担当（グループ作成）</strong></label></li>
+        </ul>
+      </div>
+
+      <div class="tl-block tl-local">
+        <h3>🟦 現地到着後すぐ</h3>
+        <ul class="checklist">
+          <li><input type="checkbox" id="t13"><label for="t13">📱 <strong>SIM購入</strong>（空港到着ロビーで。Maxis / Digi / Celcom。1週間で約1,000〜1,500円）</label></li>
+          <li><input type="checkbox" id="t14"><label for="t14">🚗 <strong>グラブアプリ起動確認</strong>（SIM入れたら即チェック！）</label></li>
+          <li><input type="checkbox" id="t15"><label for="t15">💱 <strong>最低限の両替</strong>（RM50〜100。市内でも両替できる）</label></li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== 費用サマリー ===== -->
+  <section class="card card-emerald">
+    <h2 class="section-title">💰 費用サマリー</h2>
+    <h3>現地費用目安（1人あたり・3日間）</h3>
+    <div class="table-wrap">
+      <table class="cost-table table-emerald">
+        <thead><tr><th>カテゴリ</th><th>今回プラン（標準）</th></tr></thead>
+        <tbody>
+          <tr><td data-label="カテゴリ">🍜 食事（3日間）</td><td data-label="今回プラン（標準）">RM170〜250（約5,800〜8,500円）</td></tr>
+          <tr><td data-label="カテゴリ">🚗 交通（3日間）</td><td data-label="今回プラン（標準）">RM80〜120（約2,700〜4,000円）</td></tr>
+          <tr><td data-label="カテゴリ">🎡 観光・体験</td><td data-label="今回プラン（標準）">RM150〜230（約5,100〜7,800円）</td></tr>
+          <tr><td data-label="カテゴリ"><strong>🏙️ 現地合計</strong></td><td data-label="今回プラン（標準）"><strong>約3万円</strong></td></tr>
+          <tr><td data-label="カテゴリ"><strong>✈️ 航空券</strong></td><td data-label="今回プラン（標準）"><strong>約7万円</strong></td></tr>
+          <tr style="background:rgba(232,101,10,0.12);"><td data-label="カテゴリ"><strong>💰 合計（目安）</strong></td><td data-label="今回プラン（標準）"><strong>約10万円</strong>（人によって前後あり）</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout-tip" style="margin-top:16px;">
+      💡 <strong>主な有料スポット：</strong> ツインタワー展望台 RM80（約2,700円）＋ KLタワー RM140（約4,800円）
+    </div>
+  </section>
+
+  <!-- ===== CLOSING ===== -->
+  <div style="text-align:center; padding: 32px 16px; background: linear-gradient(135deg, #E8650A 0%, #d05a08 100%); border-radius: 16px; margin-bottom: 32px;">
+    <div style="font-size: 36px; margin-bottom: 12px;">🇲🇾</div>
+    <p style="color: #ffd580; font-size: clamp(18px, 4vw, 24px); font-weight: 900; margin-bottom: 10px;">行くぞ、クアラルンプール！</p>
+    <p style="color: rgba(255,255,255,0.85); font-size: 14px; line-height: 1.8;">
+      かっちゃんが案内する「本物のKL」、全力で楽しんでいこう！<br>
+      旅行当日まで、ワクワクして待っといて〜！！
+    </p>
+  </div>
+
+</div><!-- /container -->
+
+<footer class="site-footer">
+  <p>旅のしおり v1.0 &nbsp;|&nbsp; <strong>マレーシアツアー 第5回</strong> &nbsp;|&nbsp; 作成：2026-06-09</p>
+  <p style="margin-top:4px; opacity: 0.5;">原案：03_最終プラン.md をもとに作成</p>
+</footer>
+
+</body>
+</html>
